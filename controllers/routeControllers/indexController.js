@@ -8,6 +8,3 @@ module.exports = {
     res.render("index.ejs", {books: myBook.fullBookInfo()});
   }
 }
-
-
-
