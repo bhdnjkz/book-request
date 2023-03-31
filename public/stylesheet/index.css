@@ -1,5 +1,18 @@
-.book-day {
+.body {
+    background-color: antiquewhite;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.book-day-container {
     display: flex;
-    flex-direction: column;
+    justify-content: center;
     align-items: center;
+    border-color: goldenrod;
+    border-width: thick;
+    border-style: ridge;
+}
+
+.book-day {
+    text-align: center;
+    color: rgb(10, 5, 31);
 }
