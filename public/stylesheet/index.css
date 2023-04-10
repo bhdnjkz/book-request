@@ -16,3 +16,7 @@
     text-align: center;
     color: rgb(10, 5, 31);
 }
+
+.form-submit {
+    flex-direction: column;
+}

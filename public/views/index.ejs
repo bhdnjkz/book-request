@@ -10,8 +10,19 @@
 <body class="body">
     <div class="book-day-container">
         <div class="book-day">
-            <h1>Book of the day!</h1>
-            Are you looking for a book? We recommend you try <%= books %>
+            <h1>Cool new book you just posted.</h1>
+            This is your book:  <%= books %>
           </div>
     </div>
+    <form class="form-submit" action="/" method="post">
+        <input type="text" id="title" name="title" placeholder="Title of the book">
+        <input type="text" id="author" name="author" placeholder="Author">
+        <button type="submit">Submit</button>
+      </form>
+      <ul>
+        <% if (typeof errors !== 'undefined') 
+        { %> <% errors.forEach(error => { %>
+        <li><%= error %></li>
+        <% }) %> <% } %>
+    </ul>
 </body>

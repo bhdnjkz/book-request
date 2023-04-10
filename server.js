@@ -2,11 +2,9 @@ const express = require('express')
 const app = express()
 const path = require('path')
 const PORT = 3000
-const indexRoute = require('./routes/indexRoute')
-const errorRoute = require('./routes/errorRoute')
-
+const routes = require('./routes/routes')
+const createTable = require('./config/dbCreateTable')
 require('dotenv').config()
-
 
 //middleware
 app.use(express.urlencoded({extended: true})); 
@@ -15,9 +13,9 @@ app.set('views', path.join(__dirname, '/public/views'))
 app.set('view engine', 'ejs')
 app.use(express.static('public'));
 app.use(express.static((path.join(__dirname, 'public'))));
+createTable()
 
-app.use('/', indexRoute, errorRoute)
+//routes
+app.use('/', routes)
 
-app.listen(PORT, () => {
-  console.log(`Listening to app on port ${PORT}!`)
-})
+app.listen(PORT)
