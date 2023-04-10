@@ -1,5 +1,5 @@
-const Book = require('../models/bookClass')
-const { pool } = require('../config/dbConnect')
+const Book = require('../models/book-class')
+const { pool } = require('../config/db-connect')
 
 let myBook = new Book();
 

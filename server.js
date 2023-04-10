@@ -3,7 +3,7 @@ const app = express()
 const path = require('path')
 const PORT = 3000
 const routes = require('./routes/routes')
-const createTable = require('./config/dbCreateTable')
+const createTable = require('./config/db-create-table')
 require('dotenv').config()
 
 //middleware

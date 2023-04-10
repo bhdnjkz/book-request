@@ -1,4 +1,4 @@
-const { pool } = require('./dbConnect')
+const { pool } = require('./db-connect')
 
 async function createTable() {
     try {
