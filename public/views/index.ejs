@@ -8,12 +8,6 @@
     <title>Main Page</title>
 </head>
 <body class="body">
-    <div class="book-day-container">
-        <div class="book-day">
-            <h1>Cool new book you just posted.</h1>
-            This is your book:  <%= books %>
-          </div>
-    </div>
     <form class="form-submit" action="/" method="post">
         <input type="text" id="title" name="title" placeholder="Title of the book">
         <input type="text" id="author" name="author" placeholder="Author">
@@ -25,4 +19,10 @@
         <li><%= error %></li>
         <% }) %> <% } %>
     </ul>
+    <div class="book-day-container">
+        <div class="book-day">
+            <h1>Cool new book you just posted.</h1>
+            This is your book:  <%= books %>
+          </div>
+    </div>
 </body>
